@@ -1,0 +1,34 @@
+.best{
+    background-image: url('../img/bg/best-bg.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section__title--best{
+    color: #2f3234;
+    padding: 0;
+    margin-bottom: rem(60px);
+}
+
+.best__list{
+    display: flex;
+}
+
+.best__item{
+    margin: 0 rem(15px);
+    flex: 1;
+}
+
+.best__pic{
+    height: rem(90px);
+}
+
+.best__icon{
+    width: 100%;
+    height: 100%;
+}

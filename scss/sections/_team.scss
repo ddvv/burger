@@ -1,0 +1,86 @@
+.team{
+    background: url(../img/bg/team.jpg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.team__section{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    background: rgba($dark,.93);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team__content{
+    width: 70%;
+}
+
+.team-acco__item{
+    margin-bottom: rem(10px);
+    &.active{
+        .team-acco__content{
+            height: auto;
+        }
+
+        .team-acco__title{
+            color: $yellow;
+
+            &:before{
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.team-acco__title{
+    font-size:rem(14px);
+    color: #fff;
+    margin-bottom: rem(10px);
+
+    &:before{
+        content: "";
+        width: rem(0px);
+        height: rem(0px);
+        border: rem(9px) solid transparent;
+        border-top-color: $yellow;
+        border-bottom: none;
+    }
+}
+
+.team-acco__content{
+    display: flex;
+    overflow: hidden;
+    height: 0;
+}
+
+.team-acco__avatar{
+    width: rem(100px);
+    height: rem(100px);
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+}
+
+.team-acco__avatar-pic{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+}
+
+.team-acco__occ{
+    color:#fff;
+    font-size: rem(15px);
+    
+    margin-bottom: rem(10px);
+}
+
+.team-acco__desc-text{
+    color: #fff;
+}

@@ -1,0 +1,26 @@
+//Config
+@import "config/_variables";
+@import "config/_mixins";
+
+//Resolutions
+$desktop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+
+//Media
+@import "layout/_media";
+
+//Base
+@import "layout/_fonts";
+@import "layout/_base";
+@import "layout/_adjustment";
+
+//Sections
+@import "sections/_hero";
+@import "sections/_best";
+@import "sections/_burgers";
+@import "sections/_team";
+@import "sections/_reviews";
+@import "sections/_order";
+@import "common/_fixed-menu";
