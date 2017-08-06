@@ -7,6 +7,10 @@ html{
   }
 }
 
+body, html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -17,10 +21,6 @@ body {
 
 *, *::before, *::after { 
   box-sizing: border-box; 
-}
-
-body, html {
-  height: 100%;
 }
 
 .visuallyhidden:not(:focus):not(:active) {
@@ -42,5 +42,27 @@ body, html {
 ul {
   margin: 0;
   padding: 0;
-  list-style: none;
+  
+  li{
+    list-style: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin-top: 0;
+  font-weight: normal;
+}
+
+p{
+  padding: 0;
+  margin: 0;
+}
+
+footer{
+  position: relative;
+  width: 100%;
+}
+
+*{
+  box-sizing: border-box;
 }

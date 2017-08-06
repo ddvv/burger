@@ -14,10 +14,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+
+    @include tablets{
+        width: 100%;
+        padding: 0;
+    }
 }
 
 .team__content{
     width: 70%;
+
+    @include tablets{
+        text-align: center;
+        width: 50%;
+    }
 }
 
 .team-acco__item{
@@ -38,17 +49,27 @@
 }
 
 .team-acco__title{
+    @include gagalin();
     font-size:rem(14px);
     color: #fff;
     margin-bottom: rem(10px);
+    display: flex;
+    align-items: center;
 
     &:before{
         content: "";
-        width: rem(0px);
-        height: rem(0px);
-        border: rem(9px) solid transparent;
+        width: 0;
+        height: 0;
+        border: rem(6px) solid transparent;
         border-top-color: $yellow;
         border-bottom: none;
+        margin-right: 10px;
+    }
+
+    @include tablets{
+        font-size:rem(23.65px);
+        display: inline-flex;
+        align-items: center;
     }
 }
 
@@ -56,6 +77,11 @@
     display: flex;
     overflow: hidden;
     height: 0;
+
+    @include tablets{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .team-acco__avatar{
@@ -76,11 +102,13 @@
 
 .team-acco__occ{
     color:#fff;
-    font-size: rem(15px);
-    
+    font-size: rem(14px);
     margin-bottom: rem(10px);
+    @include ubuntu(bold);
 }
 
 .team-acco__desc-text{
     color: #fff;
+    font-size: rem(14px);
+    @include ubuntu(light);
 }

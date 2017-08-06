@@ -17,18 +17,76 @@
 
 .best__list{
     display: flex;
+
+    @include phones{
+        flex-direction: column;
+    }
 }
 
 .best__item{
+    width: 100%;
     margin: 0 rem(15px);
     flex: 1;
+
+    @include phones{
+        display: flex;
+        margin-bottom: rem(40px);
+    }
 }
 
 .best__pic{
     height: rem(90px);
+
+    .best__icon{
+        width: 100%;
+        height: 100%;
+    }
+
+    .best__icon-meat{
+        fill: $orange;
+    }
+
+    .best__icon-hand{
+        fill: $yellow;
+    }
+
+    .best__icon-natural{
+        fill: $green;
+    }
 }
 
-.best__icon{
-    width: 100%;
-    height: 100%;
+.best__desc{
+    @include phones{
+        text-align: left;
+    }
+}
+
+.best__title{
+    @include lifehack();
+    font-size: rem(24.1px);
+    margin: rem(40px) rem(0px) rem(30px);
+
+    @include phones{
+        margin-top: 0;
+    }
+}
+
+.best__text{
+    @include ubuntu(light);
+    font-size: rem(14.03px);
+
+    @include phones{
+    }
+}
+
+.down-arrow{
+    //position: absolute;
+    align-content: center;
+    margin-bottom: rem(40px);
+
+    .down-arrow__icon{
+        width: rem(30px);
+        height: rem(15px);
+        fill: #fff;
+    }
 }

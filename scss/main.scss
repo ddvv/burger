@@ -1,5 +1,11 @@
+//Colors
+$orange: #e25028;
+$yellow: #f8b43a;
+$green: #8ac03e;
+$dark: #2f3234;
+$red: #e35028;
+
 //Config
-@import "config/_variables";
 @import "config/_mixins";
 
 //Resolutions
@@ -21,6 +27,8 @@ $phones: 480px;
 @import "sections/_best";
 @import "sections/_burgers";
 @import "sections/_team";
+@import "sections/_menu";
 @import "sections/_reviews";
 @import "sections/_order";
+@import "sections/_contacts";
 @import "common/_fixed-menu";
