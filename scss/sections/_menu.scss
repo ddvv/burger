@@ -15,7 +15,7 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
-  display: flex;
+  	display: flex;
 }
 
 .menu-acco__item {
@@ -24,6 +24,10 @@
 	&.active {
 		.menu-acco__trigger-text {
 			color: $yellow;
+		}
+
+		.menu-acco__content{
+			width: rem(540px);
 		}
 	}
 }
@@ -35,21 +39,29 @@
 	float: left;
 	@include cover;
 	text-decoration: none;
-  position: relative;
+	position: relative;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+
+	&:before{
+		position: absolute;
+    	top: 0;
+    	left: 0;
+    	right: 0;
+    	bottom: 0;
+    	content: "";
+    	background: rgba(20, 20, 20, 0.7);
+	}
+	
 }
 
 .menu-acco__trigger-text {
 	font-size: rem(40px);
 	color: #fff;
 	@include gagalin;
-	text-align: center;
-	white-space: nowrap;
-  position: absolute;
-  transform: rotate(-90deg) translateY(-50%);
-  transform-origin: 0 0;
-  left: 50%;
-  top: 100%;
-  margin-top: rem(-20px);
+	writing-mode: vertical-lr;
+    transform: rotate(180deg);
 }
 
 .menu-acco__content {
@@ -62,10 +74,8 @@
 
 .menu-acco__text {
 	@include ubuntu(light);
-	font-size: rem(14px);
-	color: #fff;
-	padding: rem(60px) rem(30px);
-	width: 100%;
-  line-height: 1.8;
-  display: none;
+  	font-size: rem(14px);
+  	color: #fff;
+  	line-height: rem(24px);
+  	padding: rem(60px) rem(30px);
 }
