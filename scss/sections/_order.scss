@@ -32,6 +32,7 @@
 .order__form-row {
   margin-bottom: rem(16px);
   display: flex;
+  min-width: 230px;
 }
 
 .order__form-label {
@@ -39,6 +40,10 @@
   @include ubuntu();
   color: #fff;
   font-size: rem(14px);
+
+  @include tablets{
+    margin-bottom: 0;
+  }
 }
 
 .order__form-input {
@@ -53,13 +58,17 @@
 .order__form-block {
   display: block;
   width: 100%;
-  flex: 1;
-  margin-left: 10px;
-}
-
-.order__form-row {
+  //flex: 1;
+  //margin-left: 10px;
   display: flex;
-  margin-left: -10px;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-right: rem(20px);
+
+  &:after{
+    margin-right: 0;
+  }
 }
 
 .order__form-input_textarea {

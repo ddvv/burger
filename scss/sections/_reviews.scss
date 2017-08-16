@@ -23,6 +23,8 @@
 .review {
   height: 100%;
   position: relative;
+  overflow: hidden;
+
   &:hover .review__hover {
     transform: translate(-50%, -50%)  scale(1);
     opacity: 1;
@@ -63,7 +65,7 @@
   color: #fff;
 
   @include tablets{
-    margin-bottom: rem(10px);
+    margin-bottom: rem(0px);
   }
 }
 
@@ -74,8 +76,10 @@
   font-weight: 300;
   line-height: rem(24px);
   margin-bottom: rem(20px);
+  
   @include tablets{
-    margin-bottom: rem(10px);
+    margin-bottom: rem(0px);
+    line-height: rem(20px);
   }
 }
 

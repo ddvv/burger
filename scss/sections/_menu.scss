@@ -20,6 +20,7 @@
 
 .menu-acco__item {
 	height: 100%;
+	display: flex;
 
 	&.active {
 		.menu-acco__trigger-text {
@@ -27,7 +28,8 @@
 		}
 
 		.menu-acco__content{
-			width: rem(540px);
+			width: 100%;
+			max-width: rem(540px);
 		}
 	}
 }

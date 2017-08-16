@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="scss/main.css">
   <!--<script src="/js/svg4everybody.js"></script>
     <script>svg4everybody(); // run it now or whenever you are ready</script>-->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 
 <body>
@@ -132,9 +133,9 @@
       <section class="section team">
         <div class="team__section">
           <div class="team__content">
-            <div class="section__title">
+            <h2 class="section__title">
               Команда
-            </div>
+            </h2>
             <ul class="team-acco">
               <li class="team-acco__item  active">
                 <div class="team-acco__title">
@@ -375,74 +376,74 @@
 
       <section class="section order">
         <div class="container">
-          <div class="section__title">
+          <h2 class="section__title">
             Закажите доставку
-          </div>
+          </h2>
           <div class="form">
             <form action="url">
               <div class="order__form">
                 <div class="order__form-col">
                   <div class="order__form-row">
-                    <label class="order__form-block">
-                        <p class="order__form-label">Имя</p>
+                    <div class="order__form-block">
+                        <label class="order__form-label">Имя</label>
                         <input class="order__form-input" name="name" type="text" placeholder="">
-                      </label>
-                    <label class="order__form-block">
-                        <p class="order__form-label">Телефон</p>
+                    </div>
+                    <div class="order__form-block">
+                        <label class="order__form-label">Телефон</label>
                         <input class="order__form-input phone-mask" name="phone" type="text" placeholder="">
-                      </label>
+                    </div>
                   </div>
                   <div class="order__form-row">
-                    <label class="order__form-block">
-                        <p class="order__form-label">Улица</p>
+                    <div class="order__form-block">
+                        <label class="order__form-label">Улица</label>
                         <input class="order__form-input" name="street" type="text" placeholder="">
-                      </label>
+                    </div>
                   </div>
                   <div class="order__form-row">
-                    <label class="order__form-block">
-                        <p class="order__form-label">Дом</p>
+                    <div class="order__form-block">
+                        <label class="order__form-label">Дом</label>
                         <input class="order__form-input" name="home" type="text" placeholder="">
-                      </label>
-                    <label class="order__form-block">
-                        <p class="order__form-label">Корпус</p>
+                    </div>
+                    <div class="order__form-block">
+                        <label class="order__form-label">Корпус</label>
                         <input class="order__form-input" name="part" type="text" placeholder="">
-                      </label>
-                    <label class="order__form-block">
-                        <p class="order__form-label">Квартира</p>
+                    </div>
+                    <div class="order__form-block">
+                        <label class="order__form-label">Квартира</label>
                         <input class="order__form-input" name="appt" type="text" placeholder="">
-                      </label>
-                    <label class="order__form-block">
-                        <p class="order__form-label">Этаж</p>
+                    </div>
+                    <div class="order__form-block">
+                        <label class="order__form-label">Этаж</label>
                         <input class="order__form-input" name="floor" type="text" placeholder="">
-                      </label>
+                    </div>
                   </div>
                 </div>
                 <div class="order__form-col">
                   <div class="order__form-row">
-                    <label class="order__form-block">
-                        <p class="order__form-label">Комментарий</p>
+                    <div class="order__form-block">
+                        <label class="order__form-label">Комментарий</label>
                         <textarea class="order__form-input order__form-input_textarea" name="comment"></textarea>
-                      </label>
+                    </div>
                   </div>
                   <div class="order__form-buttons">
                     <div class="order__form-row">
-                      <label class="order__radio">
+                      <div class="order__radio">
                           <input class="order__radio-elem" name="payment" type="radio">
                           <div class="order__radio-fake"></div>
-                          <div class="order__radio-title">Потребуется сдача</div>
-                        </label>
-                      <label class="order__radio">
+                          <label class="order__radio-title">Потребуется сдача</label>
+                      </div>
+                      <div class="order__radio">
                           <input class="order__radio-elem" name="payment" type="radio">
                           <div class="order__radio-fake"></div>
-                          <div class="order__radio-title">Оплата по карте</div>
-                        </label>
+                          <label class="order__radio-title">Оплата по карте</label>
+                      </div>
                     </div>
                     <div class="order__form-row">
-                      <label class="order__radio order__radio_checkbox">
+                      <div class="order__radio order__radio_checkbox">
                           <input class="order__radio-elem" name="callback" type="checkbox">
                           <div class="order__radio-fake"></div>
-                          <div class="order__radio-title">Не перезванивать</div>
-                        </label>
+                          <label class="order__radio-title">Не перезванивать</label>
+                      </div>
                     </div>
                     <div class="order__form-row">
                       <input class="order__form-button" name="order" type="submit" value="Заказать">
@@ -458,7 +459,7 @@
 
       <section class="section contacts">
         <div class="contacts__map">
-
+          <div id="map" style="width: 100%; height: 100%"></div>
         </div>
         <footer class="footer">
           <div class="container footer__container">
@@ -524,6 +525,10 @@
       <a href="#" class="fixed-menu__link"></a>
     </li>
   </ul>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <script src="./js/jquery-3.2.1.min.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
