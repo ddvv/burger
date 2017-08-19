@@ -598,7 +598,9 @@ footer {
   float: left;
   background: rgba(47, 50, 52, 0.93);
   width: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-transition: 1s;
+  transition: 1s; }
 
 .menu-acco__text {
   font-family: 'Ubuntu', Helvetica, sans-serif;
