@@ -10,6 +10,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta content="ie=edge" http-equiv="x-ua-compatible">
   <link rel="stylesheet" href="css/normalize.css">
+  <!-- plugins -->
+  <link rel="stylesheet" href="./owlcarousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="./owlcarousel/assets/owl.theme.default.min.css">
+
   <link rel="stylesheet" href="scss/main.css">
   <!--<script src="/js/svg4everybody.js"></script>
     <script>svg4everybody(); // run it now or whenever you are ready</script>-->
@@ -127,7 +131,507 @@
       </section>
 
       <section class="section burgers">
-        <div class="container"></div>
+        <div class="container">
+          <div class="slider__wrap">
+            <div class="owl-carousel">
+              <div>
+                <div class="slider__item-wrap">
+                  <div class="slider__consist-wrap">
+                    <div class="slider__consist">
+                      <svg class="slider__consist-icon">
+                        <use xlink:href="./img/sprite/sprite.svg#burger"></use>
+                      </svg>
+                    </div>
+                    <div class="slider__consist-table">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <svg class="table__icon beef">
+                                <use xlink:href="./img/sprite/sprite.svg#beef"></use>
+                              </svg>
+                            </td>
+                            <td>Говядина</td>
+                            <td>300 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon buns">
+                                <use xlink:href="./img/sprite/sprite.svg#buns"></use>
+                              </svg>
+                            </td>
+                            <td>Булочки</td>
+                            <td>100 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon salad">
+                                <use xlink:href="./img/sprite/sprite.svg#salad"></use>
+                              </svg>
+                            </td>
+                            <td>Зелень</td>
+                            <td>70 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon sauce">
+                                <use xlink:href="./img/sprite/sprite.svg#sauce"></use>
+                              </svg>
+                            </td>
+                            <td>Соус</td>
+                            <td>150 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon cucumber">
+                                <use xlink:href="./img/sprite/sprite.svg#cucumber"></use>
+                              </svg>
+                            </td>
+                            <td>Овощи</td>
+                            <td>200 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon cheese">
+                                <use xlink:href="./img/sprite/sprite.svg#cheese"></use>
+                              </svg>
+                            </td>
+                            <td>Сыр</td>
+                            <td>80 г</td>
+                          </tr>
+                          <tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="slider__calories">
+                    <svg class="calories__icon">
+                      <use xlink:href="./img/sprite/sprite.svg#kkal"></use>
+                    </svg>
+                    <p class="calories__info">1200 ккал</p>
+                  </div>
+                  <div class="slider__left">
+                    <div class="slider__pic">
+                      <img src="./img/burgers-slider/1.png" alt="">
+                    </div>
+                  </div>
+                  <div class="slider__right">
+                    <div class="slider__title section__title">
+                      Dark BEEF Burger
+                    </div>
+                    <div class="slider__desc">
+                      <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра
+                        эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса
+                        чураско.
+                      </p>
+                    </div>
+                    <div class="slider__info">
+                      <div class="slider__price section__title">
+                        500
+                      </div>
+                      <div class="header__btn"><a class="order-link" href="" data-goto="6">Заказать</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="slider__item-wrap">
+                  <div class="slider__consist-wrap">
+                    <div class="slider__consist">
+                      <svg class="slider__consist-icon">
+                        <use xlink:href="./img/sprite/sprite.svg#burger"></use>
+                      </svg>
+                    </div>
+                    <div class="slider__consist-table">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <svg class="table__icon beef">
+                                <use xlink:href="./img/sprite/sprite.svg#beef"></use>
+                              </svg>
+                            </td>
+                            <td>Говядина</td>
+                            <td>300 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon buns">
+                                <use xlink:href="./img/sprite/sprite.svg#buns"></use>
+                              </svg>
+                            </td>
+                            <td>Булочки</td>
+                            <td>100 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon salad">
+                                <use xlink:href="./img/sprite/sprite.svg#salad"></use>
+                              </svg>
+                            </td>
+                            <td>Зелень</td>
+                            <td>70 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon sauce">
+                                <use xlink:href="./img/sprite/sprite.svg#sauce"></use>
+                              </svg>
+                            </td>
+                            <td>Соус</td>
+                            <td>150 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon cucumber">
+                                <use xlink:href="./img/sprite/sprite.svg#cucumber"></use>
+                              </svg>
+                            </td>
+                            <td>Овощи</td>
+                            <td>200 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon cheese">
+                                <use xlink:href="./img/sprite/sprite.svg#cheese"></use>
+                              </svg>
+                            </td>
+                            <td>Сыр</td>
+                            <td>80 г</td>
+                          </tr>
+                          <tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="slider__calories">
+                    <svg class="calories__icon">
+                      <use xlink:href="./img/sprite/sprite.svg#kkal"></use>
+                    </svg>
+                    <p class="calories__info">1200 ккал</p>
+                  </div>
+                  <div class="slider__left">
+                    <div class="slider__pic">
+                      <img src="./img/burgers-slider/2.png" alt="">
+                    </div>
+                  </div>
+                  <div class="slider__right">
+                    <div class="slider__title section__title">
+                      Dark BEEF Burger
+                    </div>
+                    <div class="slider__desc">
+                      <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра
+                        эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса
+                        чураско.
+                      </p>
+                    </div>
+                    <div class="slider__info">
+                      <div class="slider__price section__title">
+                        500
+                      </div>
+                      <div class="header__btn"><a class="order-link" href="" data-goto="6">Заказать</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="slider__item-wrap">
+                  <div class="slider__consist-wrap">
+                    <div class="slider__consist">
+                      <svg class="slider__consist-icon">
+                        <use xlink:href="./img/sprite/sprite.svg#burger"></use>
+                      </svg>
+                    </div>
+                    <div class="slider__consist-table">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <svg class="table__icon beef">
+                                <use xlink:href="./img/sprite/sprite.svg#beef"></use>
+                              </svg>
+                            </td>
+                            <td>Говядина</td>
+                            <td>300 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon buns">
+                                <use xlink:href="./img/sprite/sprite.svg#buns"></use>
+                              </svg>
+                            </td>
+                            <td>Булочки</td>
+                            <td>100 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon salad">
+                                <use xlink:href="./img/sprite/sprite.svg#salad"></use>
+                              </svg>
+                            </td>
+                            <td>Зелень</td>
+                            <td>70 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon sauce">
+                                <use xlink:href="./img/sprite/sprite.svg#sauce"></use>
+                              </svg>
+                            </td>
+                            <td>Соус</td>
+                            <td>150 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon cucumber">
+                                <use xlink:href="./img/sprite/sprite.svg#cucumber"></use>
+                              </svg>
+                            </td>
+                            <td>Овощи</td>
+                            <td>200 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon cheese">
+                                <use xlink:href="./img/sprite/sprite.svg#cheese"></use>
+                              </svg>
+                            </td>
+                            <td>Сыр</td>
+                            <td>80 г</td>
+                          </tr>
+                          <tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="slider__calories">
+                    <svg class="calories__icon">
+                      <use xlink:href="./img/sprite/sprite.svg#kkal"></use>
+                    </svg>
+                    <p class="calories__info">1200 ккал</p>
+                  </div>
+                  <div class="slider__left">
+                    <div class="slider__pic">
+                      <img src="./img/burgers-slider/3.png" alt="">
+                    </div>
+                  </div>
+                  <div class="slider__right">
+                    <div class="slider__title section__title">
+                      Dark BEEF Burger
+                    </div>
+                    <div class="slider__desc">
+                      <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра
+                        эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса
+                        чураско.
+                      </p>
+                    </div>
+                    <div class="slider__info">
+                      <div class="slider__price section__title">
+                        500
+                      </div>
+                      <div class="header__btn"><a class="order-link" href="" data-goto="6">Заказать</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="slider__item-wrap">
+                  <div class="slider__consist-wrap">
+                    <div class="slider__consist">
+                      <svg class="slider__consist-icon">
+                        <use xlink:href="./img/sprite/sprite.svg#burger"></use>
+                      </svg>
+                    </div>
+                    <div class="slider__consist-table">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <svg class="table__icon beef">
+                                <use xlink:href="./img/sprite/sprite.svg#beef"></use>
+                              </svg>
+                            </td>
+                            <td>Говядина</td>
+                            <td>300 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon buns">
+                                <use xlink:href="./img/sprite/sprite.svg#buns"></use>
+                              </svg>
+                            </td>
+                            <td>Булочки</td>
+                            <td>100 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon salad">
+                                <use xlink:href="./img/sprite/sprite.svg#salad"></use>
+                              </svg>
+                            </td>
+                            <td>Зелень</td>
+                            <td>70 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon sauce">
+                                <use xlink:href="./img/sprite/sprite.svg#sauce"></use>
+                              </svg>
+                            </td>
+                            <td>Соус</td>
+                            <td>150 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon cucumber">
+                                <use xlink:href="./img/sprite/sprite.svg#cucumber"></use>
+                              </svg>
+                            </td>
+                            <td>Овощи</td>
+                            <td>200 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon cheese">
+                                <use xlink:href="./img/sprite/sprite.svg#cheese"></use>
+                              </svg>
+                            </td>
+                            <td>Сыр</td>
+                            <td>80 г</td>
+                          </tr>
+                          <tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="slider__calories">
+                    <svg class="calories__icon">
+                      <use xlink:href="./img/sprite/sprite.svg#kkal"></use>
+                    </svg>
+                    <p class="calories__info">1200 ккал</p>
+                  </div>
+                  <div class="slider__left">
+                    <div class="slider__pic">
+                      <img src="./img/burgers-slider/4.png" alt="">
+                    </div>
+                  </div>
+                  <div class="slider__right">
+                    <div class="slider__title section__title">
+                      Dark BEEF Burger
+                    </div>
+                    <div class="slider__desc">
+                      <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра
+                        эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса
+                        чураско.
+                      </p>
+                    </div>
+                    <div class="slider__info">
+                      <div class="slider__price section__title">
+                        500
+                      </div>
+                      <div class="header__btn"><a class="order-link" href="" data-goto="6">Заказать</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="slider__item-wrap">
+                  <div class="slider__consist-wrap">
+                    <div class="slider__consist">
+                      <svg class="slider__consist-icon">
+                        <use xlink:href="./img/sprite/sprite.svg#burger"></use>
+                      </svg>
+                    </div>
+                    <div class="slider__consist-table">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <svg class="table__icon beef">
+                                <use xlink:href="./img/sprite/sprite.svg#beef"></use>
+                              </svg>
+                            </td>
+                            <td>Говядина</td>
+                            <td>300 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon buns">
+                                <use xlink:href="./img/sprite/sprite.svg#buns"></use>
+                              </svg>
+                            </td>
+                            <td>Булочки</td>
+                            <td>100 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon salad">
+                                <use xlink:href="./img/sprite/sprite.svg#salad"></use>
+                              </svg>
+                            </td>
+                            <td>Зелень</td>
+                            <td>70 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon sauce">
+                                <use xlink:href="./img/sprite/sprite.svg#sauce"></use>
+                              </svg>
+                            </td>
+                            <td>Соус</td>
+                            <td>150 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon cucumber">
+                                <use xlink:href="./img/sprite/sprite.svg#cucumber"></use>
+                              </svg>
+                            </td>
+                            <td>Овощи</td>
+                            <td>200 г</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <svg class="table__icon cheese">
+                                <use xlink:href="./img/sprite/sprite.svg#cheese"></use>
+                              </svg>
+                            </td>
+                            <td>Сыр</td>
+                            <td>80 г</td>
+                          </tr>
+                          <tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="slider__calories">
+                    <svg class="calories__icon">
+                      <use xlink:href="./img/sprite/sprite.svg#kkal"></use>
+                    </svg>
+                    <p class="calories__info">1200 ккал</p>
+                  </div>
+                  <div class="slider__left">
+                    <div class="slider__pic">
+                      <img src="./img/burgers-slider/5.png" alt="">
+                    </div>
+                  </div>
+                  <div class="slider__right">
+                    <div class="slider__title section__title">
+                      Dark BEEF Burger
+                    </div>
+                    <div class="slider__desc">
+                      <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра
+                        эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса
+                        чураско.
+                      </p>
+                    </div>
+                    <div class="slider__info">
+                      <div class="slider__price section__title">
+                        500
+                      </div>
+                      <div class="header__btn"><a class="order-link" href="" data-goto="6">Заказать</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="section team">
@@ -239,12 +743,12 @@
             </a>
             <div class="menu-acco__content">
               <div class="menu-acco__text">
-                <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
-                Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
-                однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
-                выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
-                конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
-                стал особенно чутко относиться к слову.</p>
+                <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
+                  механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно
+                  чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо
+                  считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая
+                  эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный
+                  анжамбеман. Наш современник стал особенно чутко относиться к слову.</p>
               </div>
             </div>
           </li>
@@ -254,12 +758,12 @@
             </a>
             <div class="menu-acco__content">
               <div class="menu-acco__text">
-                <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
-                Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
-                однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
-                выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
-                конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
-                стал особенно чутко относиться к слову.</p>
+                <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
+                  механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно
+                  чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо
+                  считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая
+                  эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный
+                  анжамбеман. Наш современник стал особенно чутко относиться к слову.</p>
               </div>
             </div>
           </li>
@@ -269,12 +773,13 @@
             </a>
             <div class="menu-acco__content">
               <div class="menu-acco__text">
-                <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
-                Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
-                однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
-                выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
-                конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
-                стал особенно чутко относиться к слову.<p>
+                <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
+                  механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно
+                  чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо
+                  считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая
+                  эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный
+                  анжамбеман. Наш современник стал особенно чутко относиться к слову.
+                  <p>
               </div>
             </div>
           </li>
@@ -385,64 +890,64 @@
                 <div class="order__form-col">
                   <div class="order__form-row">
                     <div class="order__form-block">
-                        <label class="order__form-label">Имя</label>
-                        <input class="order__form-input" name="name" type="text" placeholder="">
+                      <label class="order__form-label">Имя</label>
+                      <input class="order__form-input" name="name" type="text" placeholder="">
                     </div>
                     <div class="order__form-block">
-                        <label class="order__form-label">Телефон</label>
-                        <input class="order__form-input phone-mask" name="phone" type="text" placeholder="">
-                    </div>
-                  </div>
-                  <div class="order__form-row">
-                    <div class="order__form-block">
-                        <label class="order__form-label">Улица</label>
-                        <input class="order__form-input" name="street" type="text" placeholder="">
+                      <label class="order__form-label">Телефон</label>
+                      <input class="order__form-input phone-mask" name="phone" type="text" placeholder="">
                     </div>
                   </div>
                   <div class="order__form-row">
                     <div class="order__form-block">
-                        <label class="order__form-label">Дом</label>
-                        <input class="order__form-input" name="home" type="text" placeholder="">
+                      <label class="order__form-label">Улица</label>
+                      <input class="order__form-input" name="street" type="text" placeholder="">
+                    </div>
+                  </div>
+                  <div class="order__form-row">
+                    <div class="order__form-block">
+                      <label class="order__form-label">Дом</label>
+                      <input class="order__form-input" name="home" type="text" placeholder="">
                     </div>
                     <div class="order__form-block">
-                        <label class="order__form-label">Корпус</label>
-                        <input class="order__form-input" name="part" type="text" placeholder="">
+                      <label class="order__form-label">Корпус</label>
+                      <input class="order__form-input" name="part" type="text" placeholder="">
                     </div>
                     <div class="order__form-block">
-                        <label class="order__form-label">Квартира</label>
-                        <input class="order__form-input" name="appt" type="text" placeholder="">
+                      <label class="order__form-label">Квартира</label>
+                      <input class="order__form-input" name="appt" type="text" placeholder="">
                     </div>
                     <div class="order__form-block">
-                        <label class="order__form-label">Этаж</label>
-                        <input class="order__form-input" name="floor" type="text" placeholder="">
+                      <label class="order__form-label">Этаж</label>
+                      <input class="order__form-input" name="floor" type="text" placeholder="">
                     </div>
                   </div>
                 </div>
                 <div class="order__form-col">
                   <div class="order__form-row">
                     <div class="order__form-block">
-                        <label class="order__form-label">Комментарий</label>
-                        <textarea class="order__form-input order__form-input_textarea" name="comment"></textarea>
+                      <label class="order__form-label">Комментарий</label>
+                      <textarea class="order__form-input order__form-input_textarea" name="comment"></textarea>
                     </div>
                   </div>
                   <div class="order__form-buttons">
                     <div class="order__form-row">
                       <div class="order__radio">
-                          <input class="order__radio-elem" name="payment" type="radio">
-                          <div class="order__radio-fake"></div>
-                          <label class="order__radio-title">Потребуется сдача</label>
+                        <input id="order-radio1" class="order__radio-elem" name="payment" type="radio">
+
+                        <label for="order-radio1" class="order__radio-title">Потребуется сдача</label>
                       </div>
                       <div class="order__radio">
-                          <input class="order__radio-elem" name="payment" type="radio">
-                          <div class="order__radio-fake"></div>
-                          <label class="order__radio-title">Оплата по карте</label>
+                        <input id="order-radio2" class="order__radio-elem" name="payment" type="radio">
+
+                        <label for="order-radio2" class="order__radio-title">Оплата по карте</label>
                       </div>
                     </div>
                     <div class="order__form-row">
                       <div class="order__radio order__radio_checkbox">
-                          <input class="order__radio-elem" name="callback" type="checkbox">
-                          <div class="order__radio-fake"></div>
-                          <label class="order__radio-title">Не перезванивать</label>
+                        <input id="order-checkbox1" class="order__checkbox-elem" name="callback" type="checkbox">
+
+                        <label for="order-checkbox1" class="order__radio-title">Не перезванивать</label>
                       </div>
                     </div>
                     <div class="order__form-row">
@@ -537,6 +1042,9 @@
 
   <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
   <script src="./js/jquery-3.2.1.min.js"></script>
+  <!-- plugins -->
+  <script type="text/javascript" src="./owlcarousel/owl.carousel.min.js" defer></script>
+  <script type="text/javascript" src="./js/plugins.js"></script>
   <script type="text/javascript" src="./js/main.js"></script>
 </body>
 

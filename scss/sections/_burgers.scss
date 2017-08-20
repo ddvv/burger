@@ -1,3 +1,209 @@
 .burgers {
   background: linear-gradient(180deg,#f9b43b 0,#eb8c38 40%,#eb8c38 60%,#eb8c38 0,#f9b43b);
 }
+
+.slider__wrap{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 90%;
+}
+
+.slider__item-wrap{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  padding-bottom: rem(60px);
+  
+  @include tablets{
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+  }
+}
+
+.slider__consist-wrap{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.slider__consist{
+  width: rem(90px);
+  height: rem(90px);
+  background-color: rgba($red, .4);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  
+  .slider__consist-icon{
+    width: rem(45px);
+    height: rem(45px);
+    fill: #fff;
+  }
+
+  &:after{
+    content: 'состав';
+    @include gagalin();
+    font-size: rem(14px);
+    color: #fff;
+  }
+
+  &:hover{
+    background-color: rgba($red, 1);
+
+    & + .slider__consist-table{
+      display: block;
+    }
+  }
+}
+
+.slider__consist-table{
+  width: rem(270px);
+  height: rem(330px);
+  background-color: rgba(#ffffff, .9);
+  border-radius: 5px;
+  padding: rem(20px);
+  display: none;
+
+  table{
+    width: 100%;
+  }
+
+  table > tbody > tr > td{
+    @include ubuntu(medium);
+    font-size: rem(14px);
+    color: $dark;
+  }
+
+  table > tbody > tr :last-child{
+    text-align: right;
+  }
+
+  .table__icon{
+    width: rem(45px);
+    height: rem(45px);
+  }
+
+  .beef, .sauce{
+    fill: $orange;
+  }
+  .buns, .cheese{
+    fill: $yellow;
+  }
+  .salad, .cucumber{
+    fill: $green;
+  }
+}
+
+.slider__calories{
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  opacity: .5;
+
+  @include tablets{
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+  }
+}
+
+.calories__icon{
+  width: rem(60px);
+  height: rem(60px);
+  fill: #fff;
+}
+
+.calories__info{
+  @include gagalin();
+  font-size: rem(20px);
+  color: #fff;
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.slider__left, .slider__right{
+  width: 50%;
+  height: 100%;
+
+  @include tablets{
+    width: 90%;
+  }
+}
+
+.slider__right{
+  @include tablets{
+    text-align: center;
+  }
+}
+
+.slider__pic{
+
+  img{
+    max-width: 100%;
+    margin: 0 auto;
+
+    @include tablets{
+      max-width: rem(472px);
+    }
+  }
+}
+
+.slider__title{
+  color: #fff;
+  padding-top: 0;
+  line-height: 1;
+  margin-bottom: rem(20px);  
+}
+
+.slider__desc p{
+  @include ubuntu(light);
+  font-size: rem(14px);
+  color: #fff;
+  line-height: 1.5;
+}
+
+.slider__info{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between; 
+}
+
+.slider__price{
+  color: $red;
+  padding-top: 0;
+
+  &:after{
+    content: 'рублей';
+    font-size: rem(30px);
+  }
+}
+
+.owl-prev{
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  width: rem(30px);
+  height: rem(30px);
+  background: url(../img/icons/arrow-scroll.svg) center center no-repeat;
+  transform: rotate(90deg);
+}
+
+.owl-next{
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  width: rem(30px);
+  height: rem(30px);
+  background: url(../img/icons/arrow-scroll.svg) center center no-repeat;
+  transform: rotate(-90deg);
+}

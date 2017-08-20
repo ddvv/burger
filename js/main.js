@@ -28,7 +28,82 @@ $(function(){
     };    
     contactsMap();
 
+    /* function burgerSlider(){
+        
+        var moveSlide = function (container, slideNum){
+            
+            var items = container.find('.slider__item'),
+                activeSlide = items.filter('.active'),
+                reqItem = items.eq(slideNum),
+                reqIndex = reqItem.index(),
+                list = container.find('.slider__list'),
+                duration = 500;
+            
+            if(reqItem.length){
+                list.animate({
+                    'left' : -reqIndex * 100 + '%'
+                }, duration, function(){
+                    activeSlide.removeClass('active');
+                    reqItem.addClass('active');
+                }); 
+            }
+        };
+          
+        $('.slider__btn').on('click', function(e){
+            e.preventDefault();
+            
+            var elem = $(e.target),
+                container = elem.closest('.slider'),
+                items = $('.slider__item', container),
+                activeItem = items.filter('.active'),
+                existedItem, edgeItem, reqItem;
+            
+            if(elem.hasClass('slider__btn-next')){
+                existedItem = activeItem.next();
+                edgeItem = items.first();
+            }
+            
+            if(elem.hasClass('slider__btn-prev')){
+                existedItem = activeItem.prev();
+                edgeItem = items.last(); 
+            }
+            
+            reqItem = existedItem.length
+                ? existedItem.index()
+                : edgeItem.index();
+            
+            moveSlide(container, reqItem);
+            
+        });
+    };
+    burgerSlider(); */
 
+    function teamAcco(){
+        $('.team-acco').on('click', function(e){
+            e.preventDefault()
+          
+            var elem = $(e.target),
+                item = elem.parent();
+
+            items = item.siblings();
+
+            if(!item.hasClass('active')){
+                item.addClass('active');
+                items.removeClass('active');
+
+            }
+            else{
+                item.removeClass('active');
+            }    
+
+            
+          
+          
+        })
+    };
+    teamAcco();
+
+    // вертикальное меню
     function menuAcco(){
         $(function(){
             $('.menu-acco__trigger').on('click', function(e){
@@ -66,4 +141,6 @@ $(function(){
           });
     };
     menuAcco();
+
+
 });

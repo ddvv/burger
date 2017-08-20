@@ -50,3 +50,9 @@
     background-color: darken($orange, 7%);
   }
 }
+
+.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+}
