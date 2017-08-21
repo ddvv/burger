@@ -574,16 +574,31 @@ footer {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
 
 .slider__price {
-  color: #e45028;
-  padding-top: 0; }
+  color: #e25028;
+  font-family: 'Gagalin', Helvetica, sans-serif;
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 1.42;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline; }
+  .slider__price p {
+    color: #e45028;
+    padding-top: 0; }
   .slider__price:after {
     content: 'рублей';
     font-size: 1.875rem; }
+
+.slider__btn {
+  -webkit-box-sizing: padding-box;
+          box-sizing: padding-box; }
 
 .owl-prev {
   position: absolute;
