@@ -13,6 +13,8 @@
   <!-- plugins -->
   <link rel="stylesheet" href="./owlcarousel/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="./owlcarousel/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="./qtip/jquery.qtip.css">
+  <link rel="stylesheet" href="./fullPage/jquery.fullpage.css">
 
   <link rel="stylesheet" href="scss/main.css">
   <!--<script src="/js/svg4everybody.js"></script>
@@ -22,7 +24,7 @@
 
 <body>
   <div class="wrapper">
-    <div class="maincontent">
+    <div class="maincontent" id="fullpage">
       <section class="section hero">
         <div class="container hero__container">
           <header class="header">
@@ -228,7 +230,7 @@
                       <div class="slider__price">
                         <p>500</p>
                       </div>
-                      <div class="slider__btn"><a class="order-link" href="" data-goto="6">Заказать</a></div>
+                      <div class="header__btn"><a class="order-link" href="" data-goto="6">Заказать</a></div>
                     </div>
                   </div>
                 </div>
@@ -324,7 +326,7 @@
                       </p>
                     </div>
                     <div class="slider__info">
-                      <div class="slider__price section__title">
+                      <div class="slider__price">
                         500
                       </div>
                       <div class="header__btn"><a class="order-link" href="" data-goto="6">Заказать</a></div>
@@ -423,7 +425,7 @@
                       </p>
                     </div>
                     <div class="slider__info">
-                      <div class="slider__price section__title">
+                      <div class="slider__price">
                         500
                       </div>
                       <div class="header__btn"><a class="order-link" href="" data-goto="6">Заказать</a></div>
@@ -522,7 +524,7 @@
                       </p>
                     </div>
                     <div class="slider__info">
-                      <div class="slider__price section__title">
+                      <div class="slider__price">
                         500
                       </div>
                       <div class="header__btn"><a class="order-link" href="" data-goto="6">Заказать</a></div>
@@ -621,7 +623,7 @@
                       </p>
                     </div>
                     <div class="slider__info">
-                      <div class="slider__price section__title">
+                      <div class="slider__price">
                         500
                       </div>
                       <div class="header__btn"><a class="order-link" href="" data-goto="6">Заказать</a></div>
@@ -885,41 +887,41 @@
             Закажите доставку
           </h2>
           <div class="form">
-            <form action="url">
+            <form action="server.php" method="post" id="order-form">
               <div class="order__form">
                 <div class="order__form-col">
                   <div class="order__form-row">
                     <div class="order__form-block">
                       <label class="order__form-label">Имя</label>
-                      <input class="order__form-input" name="name" type="text" placeholder="">
+                      <input class="order__form-input" data-error="Заполните поле Имя!" name="name" type="text" placeholder="">
                     </div>
                     <div class="order__form-block">
                       <label class="order__form-label">Телефон</label>
-                      <input class="order__form-input phone-mask" name="phone" type="text" placeholder="">
+                      <input class="order__form-input phone-mask" data-error="Заполните поле Телефон!" name="phone" type="text" placeholder="">
                     </div>
                   </div>
                   <div class="order__form-row">
                     <div class="order__form-block">
                       <label class="order__form-label">Улица</label>
-                      <input class="order__form-input" name="street" type="text" placeholder="">
+                      <input class="order__form-input" data-error="Заполните поле Улица!" name="street" type="text" placeholder="">
                     </div>
                   </div>
                   <div class="order__form-row">
                     <div class="order__form-block">
                       <label class="order__form-label">Дом</label>
-                      <input class="order__form-input" name="home" type="text" placeholder="">
+                      <input class="order__form-input" data-error="Заполните поле Дом!" name="home" type="text" placeholder="">
                     </div>
                     <div class="order__form-block">
                       <label class="order__form-label">Корпус</label>
-                      <input class="order__form-input" name="part" type="text" placeholder="">
+                      <input class="order__form-input" data-error="Заполните поле Корпус!" name="part" type="text" placeholder="">
                     </div>
                     <div class="order__form-block">
                       <label class="order__form-label">Квартира</label>
-                      <input class="order__form-input" name="appt" type="text" placeholder="">
+                      <input class="order__form-input" data-error="Заполните поле Квартира!" name="appt" type="text" placeholder="">
                     </div>
                     <div class="order__form-block">
                       <label class="order__form-label">Этаж</label>
-                      <input class="order__form-input" name="floor" type="text" placeholder="">
+                      <input class="order__form-input" data-error="Заполните поле Этаж!" name="floor" type="text" placeholder="">
                     </div>
                   </div>
                 </div>
@@ -927,18 +929,18 @@
                   <div class="order__form-row">
                     <div class="order__form-block">
                       <label class="order__form-label">Комментарий</label>
-                      <textarea class="order__form-input order__form-input_textarea" name="comment"></textarea>
+                      <textarea class="order__form-input order__form-input_textarea" data-error="Заполните поле Комментарий!" name="comment"></textarea>
                     </div>
                   </div>
                   <div class="order__form-buttons">
                     <div class="order__form-row">
                       <div class="order__radio">
-                        <input id="order-radio1" class="order__radio-elem" name="payment" type="radio">
+                        <input id="order-radio1" class="order__radio-elem" name="payment" type="radio" value="наличными">
 
                         <label for="order-radio1" class="order__radio-title">Потребуется сдача</label>
                       </div>
                       <div class="order__radio">
-                        <input id="order-radio2" class="order__radio-elem" name="payment" type="radio">
+                        <input id="order-radio2" class="order__radio-elem" name="payment" type="radio" value="картой">
 
                         <label for="order-radio2" class="order__radio-title">Оплата по карте</label>
                       </div>
@@ -1013,6 +1015,38 @@
       </section>
     </div>
   </div>
+  <div class="fullscreen-menu">
+    <div class="fullscreen-menu__logo">
+      <a class="logo" href="#"><img class="logo__img" src="img/logo.svg" alt="logo"></a>    
+    </div>
+    <div class="fullscreen-menu__items">
+      <nav class="fullscreen-menu__nav">
+        <ul class="fullscreen__list">
+            <li class="fullscreen__item">
+              <a class="nav__link" href="" data-goto="1">о нас</a>
+            </li>
+            <li class="fullscreen__item fullscreen-menu__item">
+              <a class="nav__link" href="" data-goto="2">бургеры</a>
+            </li>
+            <li class="fullscreen__item fullscreen-menu__item">
+              <a class="nav__link" href="" data-goto="3">команда</a>
+            </li>
+            <li class="fullscreen__item fullscreen-menu__item">
+              <a class="nav__link" href="" data-goto="4">меню</a>
+            </li>
+            <li class="fullscreen__item fullscreen-menu__item">
+              <a class="nav__link" href="" data-goto="5">отзывы</a>
+            </li>
+            <li class="fullscreen__item fullscreen-menu__item">
+              <a class="nav__link" href="" data-goto="7">контакты</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+    <a class="fullscreen-menu__close" href="#">
+      <img src="./img/icons/close.svg" alt="">
+    </a>
+  </div>
   <ul class="fixed-menu">
     <li class="fixed-menu__item active">
       <a href="#" class="fixed-menu__link"></a>
@@ -1045,7 +1079,10 @@
   <!-- plugins -->
   <script type="text/javascript" src="./owlcarousel/owl.carousel.min.js" defer></script>
   <script type="text/javascript" src="./js/plugins.js"></script>
+  <script type="text/javascript" src="./qtip/jquery.qtip.min.js"></script>
+  <script type="text/javascript" src="./fullPage/jquery.fullpage.min.js"></script>
   <script type="text/javascript" src="./js/main.js"></script>
+  <script type="text/javascript" src="./js/order-form.js"></script>
 </body>
 
 </html>

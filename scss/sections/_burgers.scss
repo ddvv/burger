@@ -1,12 +1,13 @@
 .burgers {
   background: linear-gradient(180deg,#f9b43b 0,#eb8c38 40%,#eb8c38 60%,#eb8c38 0,#f9b43b);
+  display: flex;
 }
 
 .slider__wrap{
   display: flex;
   align-items: center;
-  height: 100vh;
-  width: 90%;
+  //height: 100vh;
+  width: 95%;
 }
 
 .slider__item-wrap{
@@ -153,7 +154,8 @@
     margin: 0 auto;
 
     @include tablets{
-      max-width: rem(472px);
+      max-width: 65%;
+
     }
   }
 }

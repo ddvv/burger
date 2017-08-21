@@ -29,6 +29,10 @@
         text-align: center;
         width: 50%;
     }
+
+    @include phones{
+        width: 90%;
+    }
 }
 
 .team-acco__item{

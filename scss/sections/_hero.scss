@@ -146,9 +146,16 @@
 }
 
 .hero__description {
-  flex-direction: column;
-  justify-content: center;
-  //width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    //width: 50%;
+
+    @include phones{
+        .section__title{
+            padding-top: 0;
+            line-height: 1;
+        }
+    }
 }
 
 .section__title {
@@ -159,6 +166,10 @@
   line-height: 1.42;
   margin: 0;
   padding-top: rem(60px);
+
+  @include phones{
+    padding-top: 0;
+  }
 }
 
 .hero__description-text {
@@ -167,4 +178,8 @@
   font-size: rem(65px);
   font-weight: 500;
   line-height: 1;
+
+  @include phones{
+    font-size: rem(46px);
+  }
 }

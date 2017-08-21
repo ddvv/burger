@@ -81,6 +81,10 @@
     margin-bottom: rem(0px);
     line-height: rem(20px);
   }
+
+  @include phones{
+    display: none;
+  }
 }
 
 .review__view {

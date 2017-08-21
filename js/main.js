@@ -142,5 +142,19 @@ $(function(){
     };
     menuAcco();
 
+    // полноэкранное меню
+    function fullscreen(){
+        $('.header__hamburger').on('click', function(e){
+            e.preventDefault();
 
+            $('.fullscreen-menu').addClass('visible');
+        });
+
+        $('.fullscreen-menu__close').on('click', function(e){
+            e.preventDefault();
+
+            $('.fullscreen-menu').removeClass('visible');           
+        });
+    };
+    fullscreen();
 });

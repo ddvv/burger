@@ -56,6 +56,9 @@
     	background: rgba(20, 20, 20, 0.7);
 	}
 	
+	@include phones{
+		width: rem(60px);
+	}
 }
 
 .menu-acco__trigger-text {
