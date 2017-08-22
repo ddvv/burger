@@ -1,32 +1,38 @@
 $(function(){  
 
     // загрузка Яндекс Карты
-    function contactsMap(){
+    
         
-        ymaps.ready(init);
-        var myMap;
+    ymaps.ready(init);
+    var myMap;
 
-        function init(){
-            
-            myMap = new ymaps.Map("map", {
-                center: [59.91817154482064,30.30557799999997],
-                zoom: 10,
-                // Изначально на карте есть только ползунок масштаба
-                // и кнопка полноэкранного режима
-                controls: ["zoomControl", "fullscreenControl"],
-            });
-            myMap.behaviors.disable('scrollZoom');
+    function init(){
+        
+        myMap = new ymaps.Map("map", {
+            center: [59.91817154482064,30.30557799999997],
+            zoom: 10,
+            // Изначально на карте есть только ползунок масштаба
+            // и кнопка полноэкранного режима
+            controls: ["zoomControl", "fullscreenControl"],
+        });
+        myMap.behaviors.disable('scrollZoom');
 
-            var myPlacemark = new ymaps.Placemark([59.89161479955184,30.31982589428706], {}, {
-                iconLayout: 'default#image',
-                iconImageHref: '../img/placemark.svg',
-                iconImageSize: [30, 42],
-                iconImageOffset: [-3, -42]
-            });
-            myMap.geoObjects.add(myPlacemark);
-        };
-    };    
-    contactsMap();
+        var myPlacemark = new ymaps.Placemark([59.89161479955184,30.31982589428706], {}, {
+            iconLayout: 'default#image',
+            iconImageHref: './img/placemark.svg',
+            iconImageSize: [30, 42],
+            iconImageOffset: [-3, -42]
+        });
+
+        var myPlacemark2 = new ymaps.Placemark([59.9424159315517,30.278049935851797], {}, {
+            iconLayout: 'default#image',
+            iconImageHref: './img/placemark.svg',
+            iconImageSize: [30, 42],
+            iconImageOffset: [-3, -42]
+        });
+        myMap.geoObjects.add(myPlacemark);
+        myMap.geoObjects.add(myPlacemark2);
+    };
 
     /* function burgerSlider(){
         
@@ -157,4 +163,26 @@ $(function(){
         });
     };
     fullscreen();
+
+    // One Page Scroll
+    $('.fixed-menu__item').on('click', function(e){
+        var elem = $(e.target).parent(),
+            num = elem.index() + 1,
+            siblings = elem.siblings();
+
+        if(!elem.hasClass('active')){
+            $.fn.fullpage.moveTo(num);
+            siblings.removeClass('active');
+            elem.addClass('active');
+        }
+    });
+
+    $('.fixed-menu__link').on('click', function(e){
+        e.preventDefault();
+
+        var elem = $(e.target);
+
+            console.log(elem);
+    });
+
 });
