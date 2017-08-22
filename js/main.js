@@ -19,7 +19,7 @@ $(function(){
 
             var myPlacemark = new ymaps.Placemark([59.89161479955184,30.31982589428706], {}, {
                 iconLayout: 'default#image',
-                iconImageHref: './../img/placemark.svg',
+                iconImageHref: '../img/placemark.svg',
                 iconImageSize: [30, 42],
                 iconImageOffset: [-3, -42]
             });
