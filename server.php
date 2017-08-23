@@ -49,5 +49,7 @@
     }else{
         $data['status'] = "NO";
         $data['mes'] = "На сервере произошла ошибка";
-    }
+	}
+	
+	echo json_encode($data);
 ?>

@@ -11,6 +11,23 @@ $(document).ready(function(){
     });
 
     $('#fullpage').fullpage({
-      verticalCentered: false
+      verticalCentered: false,
+      onLeave: function(index, nextIndex, direction){
+        var elem = $('.fixed-menu__item');
+        var flag = elem.eq(nextIndex-1)
+        flag.addClass('active');
+        flag.siblings().removeClass('active');
+      }
+    });
+
+    $(function () {
+      $('.review__view').fancybox();
+    
+      $('.close__link').on('click', function (e) {
+        e.preventDefault()
+    
+        $.fancybox.close();
+      });
+    
     });
 });

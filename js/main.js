@@ -19,19 +19,11 @@ $(function(){
 
         var myPlacemark = new ymaps.Placemark([59.89161479955184,30.31982589428706], {}, {
             iconLayout: 'default#image',
-            iconImageHref: './img/placemark.svg',
-            iconImageSize: [30, 42],
-            iconImageOffset: [-3, -42]
-        });
-
-        var myPlacemark2 = new ymaps.Placemark([59.9424159315517,30.278049935851797], {}, {
-            iconLayout: 'default#image',
-            iconImageHref: './img/placemark.svg',
+            iconImageHref: './../img/placemark.svg',
             iconImageSize: [30, 42],
             iconImageOffset: [-3, -42]
         });
         myMap.geoObjects.add(myPlacemark);
-        myMap.geoObjects.add(myPlacemark2);
     };
 
     /* function burgerSlider(){
@@ -101,10 +93,7 @@ $(function(){
             else{
                 item.removeClass('active');
             }    
-
-            
-          
-          
+ 
         })
     };
     teamAcco();
@@ -165,24 +154,43 @@ $(function(){
     fullscreen();
 
     // One Page Scroll
-    $('.fixed-menu__item').on('click', function(e){
-        var elem = $(e.target).parent(),
-            num = elem.index() + 1,
-            siblings = elem.siblings();
+    function pageScroll(){
+        $('.fixed-menu__item').on('click', function(e){
+            var elem = $(e.target).parent(),
+                num = elem.index() + 1,
+                siblings = elem.siblings();
 
-        if(!elem.hasClass('active')){
-            $.fn.fullpage.moveTo(num);
-            siblings.removeClass('active');
-            elem.addClass('active');
-        }
-    });
+            if(!elem.hasClass('active')){
+                $.fn.fullpage.moveTo(num);
+                siblings.removeClass('active');
+                elem.addClass('active');
+            }
+        });
 
-    $('.fixed-menu__link').on('click', function(e){
-        e.preventDefault();
+        $('.fixed-menu__link').on('click', function(e){
+            e.preventDefault();
 
-        var elem = $(e.target);
+            var elem = $(e.target);
 
-            console.log(elem);
-    });
+            //console.log(elem);
+        });
 
+        $('[data-goto]').on('click touchstart', function (e) {
+            e.preventDefault();
+        
+            var elem = $(e.target);
+            var sectionNum = parseInt(elem.attr('data-goto'));
+            $.fn.fullpage.moveTo(sectionNum+1);
+            $('.fullscreen-menu').removeClass('visible');
+
+        });
+    };
+    pageScroll();
+
+    
+    
+        
+
+
+    
 });

@@ -43,6 +43,9 @@
         background-color: #fff;
         margin: .9375rem auto;
     }
+    &:last-child:after{
+        display: none;
+    }
 }
     
 .fullscreen-menu__close{
