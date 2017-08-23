@@ -121,7 +121,7 @@ $(function(){
                 })
                 
                 content.css({
-                  'width' : '100%' // установить высоту блока acco__content-text
+                  'width' : '20rem' // установить высоту блока acco__content-text
                 })
               }
               else{
